@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow Text Hide</title>
+
+    <style>
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        p {
+            background-color: rgba(150, 243, 255, 0.815);
+            border: 2px solid #4b4b4b;
+            width: 20%;
+            padding: 20px;
+            text-align: justify;
+            border-radius: 4px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        p:hover {
+            background-color: rgba(171, 245, 255, 0.925);
+            overflow: visible;
+            white-space: normal;
+            width: 40%;
+            transition: 400ms ease-in-out;
+        }
+
+
+        .loader {
+            width: calc(80px / cos(45deg));
+            height: 10px;
+            background: repeating-linear-gradient(-45deg,#000 0 15px,#0000 0 20px) left/200% 100%;
+            animation: l3 2s infinite linear;
+        }
+        
+        @keyframes l3 {
+            100% {background-position:right}
+        }
+    </style>
+</head>
+<body class="container">
+    <div style="display: flex; justify-content: center; margin: 50px 0;">
+        <div class="loader"></div>
+        <div class="loader"></div>
+    </div>
+
+    <p style="text-align: center;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus similique iure alias excepturi dolore sunt quaerat. Fugiat expedita vitae, nesciunt minus earum rerum asperiores eius repellat, facere velit voluptas. Totam?
+        Doloribus eligendi, harum minus omnis quaerat saepe culpa eum reiciendis porro, atque autem, rem nihil? Fuga obcaecati quis aspernatur, odio, vitae iure tenetur corporis mollitia quasi voluptatum recusandae delectus sit.
+        Odio reprehenderit ipsam, rem magni provident quod. Assumenda tempora illum veritatis? Delectus nostrum pariatur nisi reiciendis eius! Suscipit possimus mollitia itaque, earum, sint fugit molestias veniam optio tenetur, aliquid placeat.
+        Neque, voluptatibus. Sequi sint beatae quae, at nostrum dolore vero veritatis delectus aspernatur eligendi porro id fugit dolorem exercitationem molestiae nesciunt obcaecati ullam aut? Cum nihil ratione recusandae veritatis inventore.
+        Nesciunt expedita dicta magnam molestiae eius, et corrupti omnis voluptatum saepe accusantium. Aut labore, enim tenetur modi ad, minima iusto temporibus neque molestias, at quas amet odio aliquam porro earum!
+    </p>
+</body>
+</html>

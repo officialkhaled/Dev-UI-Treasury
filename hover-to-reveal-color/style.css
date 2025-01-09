@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    padding: 1.25rem;
+
+    /* min-height: 200vh; */
+
+    /* background-image:
+        url(https://cdn.pixabay.com/photo/2016/06/01/16/40/thumb-1429327_1280.png),
+        url(https://cdn.pixabay.com/photo/2014/04/03/00/35/emoticon-308751_1280.png),
+        url(https://images.pexels.com/photos/14766498/pexels-photo-14766498.jpeg);
+    background-size: 150px, 200px, cover;
+    background-repeat: no-repeat;
+    background-position: 20% 50%, 50% 50%, top left; */
+}
+
+body:has(#switch-light:checked) {
+    color: #070707;
+    background:
+        /* fixed linear-gradient(#070707, #070707 6px, transparent 6px, transparent), */
+        fixed linear-gradient(transparent, #fff 70%), fixed repeating-linear-gradient(#efefef, #efefef 1px, transparent 1px, transparent 40px),
+        fixed repeating-linear-gradient(to right, #efefef, #efefef 1px, transparent 1px, transparent 40px) white;
+}
+
+body:has(#switch-dark:checked) {
+    color: #fff;
+    background:
+        /* fixed linear-gradient(#fbe331, #fbe331 6px, transparent 6px, transparent), */
+        fixed linear-gradient(transparent, #070707 70%),
+        fixed repeating-linear-gradient(#2b2b2b, #2b2b2b 1px, transparent 1px, transparent 40px),
+        fixed repeating-linear-gradient(to right, #2b2b2b, #2b2b2b 1px, transparent 1px, transparent 40px) #070707;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    margin-block-end: 1em;
+}
+
+/* Switch */
+.switcher {
+    display: flex;
+    justify-content: center;
+}
+
+.switcher input {
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
+}
+
+.switcher label {
+    background-color: #e4e4e4;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.125rem;
+    line-height: 1;
+    text-align: center;
+    padding: 0.75rem 1.5rem;
+    margin-right: -1px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    transition: all 0.1s ease-in-out;
+}
+
+.switcher label:hover {
+    cursor: pointer;
+}
+
+.switcher input:checked+label {
+    color: #fff;
+    background-color: #070707;
+}
+
+.switcher #switch-dark:checked+label {
+    color: #070707;
+    background-color: #fbe331;
+}
+
+.switcher label:first-of-type {
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.switcher label:last-of-type {
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+img {
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.5s ease-out;
+    filter: grayscale(100%);
+
+}
+
+img:hover {
+    filter: grayscale(0%);
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    gap: 50px;
+}
+
+.img-1 {
+    width: 620px;
+    aspect-ratio: 16/9;
+    box-shadow: 0px 3px 19px 0px rgba(36, 36, 36, 0.5);
+    transform: rotate(-5deg);
+    transition: 0.5s ease-out;
+    opacity: 0.75;
+}
+
+.img-1:hover {
+    transform: rotate(0deg);
+    transform: scale(1.75);
+    z-index: 1;
+    opacity: 1;
+}
+
+.img-2 {
+    margin-top: 60px;
+    width: 480px;
+    aspect-ratio: 1/1;
+    box-shadow: 0px 3px 19px 0px rgba(37, 37, 37, 0.5);
+    transform: rotate(5deg);
+    transition: 0.5s ease-out;
+    opacity: 0.75;
+}
+
+.img-2:hover {
+    transform: rotate(0deg);
+    transform: scale(1.5);
+    z-index: 1;
+    opacity: 1;
+}

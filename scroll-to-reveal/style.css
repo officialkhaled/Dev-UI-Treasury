@@ -1,0 +1,45 @@
+.main-text {
+    margin-top: 640px;
+}
+
+.texts {
+    padding-bottom: 640px;
+}
+
+.box {
+    width: 300px;
+    height: 320px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 7px;
+    margin: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background-color: #22232e;
+    animation: reveal ease-in-out;
+   animation-timeline: view();
+  }
+  .box h2 {
+    color: #00c2cb;
+    font-size: 23px;
+    line-height: 0px;
+  }
+  .box p {
+    text-align: center;
+    width: 230px;
+    margin: 0px 0px 20px 0px;
+    color: #e0ffff;
+  }
+
+  @keyframes reveal {
+    0% {
+       transform: scale(0.8) translateX(200px);
+       opacity: 0;
+    }
+    100% {
+       transform: scale(1) translateX(0);
+       opacity: 1;
+    }
+   }
