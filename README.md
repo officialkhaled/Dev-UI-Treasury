@@ -1,6 +1,6 @@
 # Dev-UI-Treasury
 A collection of custom CSS and JavaScript components to enhance your web projects! 🎨✨  
-From cool buttons to unique backgrounds, light-to-dark switchers, and stylish boxes — all designed to make your UI stand out.
+From cool buttons to unique backgrounds, light-to-dark switchers, and many more — all designed to make your UI stand out.
 
 ---
 
