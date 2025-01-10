@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: 40px auto;
+}
+
+h1 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+p {
+    margin: 40px 0;
+}
+
+.content {
+    background-color: #196ac7;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.full-bleed {
+    box-shadow: 0 0 0 100vmax #196ac7;
+    clip-path: inset(0 -100vmax);
+}
