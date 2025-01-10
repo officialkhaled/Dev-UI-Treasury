@@ -1,0 +1,38 @@
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+p {
+    background-color: rgba(150, 243, 255, 0.815);
+    border: 2px solid #4b4b4b;
+    width: 20%;
+    padding: 20px;
+    text-align: justify;
+    border-radius: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+p:hover {
+    background-color: rgba(171, 245, 255, 0.925);
+    overflow: visible;
+    white-space: normal;
+    width: 40%;
+    transition: 400ms ease-in-out;
+}
+
+
+.loader {
+    width: calc(80px / cos(45deg));
+    height: 10px;
+    background: repeating-linear-gradient(-45deg, #000 0 15px, #0000 0 20px) left/200% 100%;
+    animation: l3 2s infinite linear;
+}
+
+@keyframes l3 {
+    100% {
+        background-position: right
+    }
+}

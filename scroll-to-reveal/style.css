@@ -1,45 +1,135 @@
-.main-text {
-    margin-top: 640px;
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
-.texts {
-    padding-bottom: 640px;
-}
-
-.box {
-    width: 300px;
-    height: 320px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 7px;
-    margin: 15px;
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    background-color: #22232e;
-    animation: reveal ease-in-out;
-   animation-timeline: view();
-  }
-  .box h2 {
-    color: #00c2cb;
-    font-size: 23px;
-    line-height: 0px;
-  }
-  .box p {
+h1 {
+    width: 100%;
+    height: 100vh;
+    line-height: 80vh;
     text-align: center;
-    width: 230px;
-    margin: 0px 0px 20px 0px;
-    color: #e0ffff;
-  }
+    display: block;
+    font-size: 60px;
+}
 
-  @keyframes reveal {
-    0% {
-       transform: scale(0.8) translateX(200px);
-       opacity: 0;
+.view {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.block {
+    height: 200px;
+    width: 300px;
+    margin: 50px;
+    border: 0.5mm solid black;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+        rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.block:nth-child(1) {
+    background: rgb(232, 88, 67);
+}
+
+.block:nth-child(2) {
+    background: rgb(26, 84, 207);
+}
+
+.block:nth-child(3) {
+    background: rgb(36, 217, 127);
+}
+
+.block:nth-child(4) {
+    background: rgb(157, 86, 247);
+    width: 700px;
+}
+
+.block:nth-child(5) {
+    background: rgb(250, 201, 82);
+}
+
+.block:nth-child(6) {
+    background: rgb(26, 84, 207);
+}
+
+.block:nth-child(7) {
+    background: rgb(157, 86, 247);
+}
+
+.block:nth-child(8) {
+    background: rgb(36, 217, 127);
+    width: 700px;
+}
+
+.block:nth-child(9) {
+    background: rgb(232, 88, 67);
+}
+
+.block:nth-child(10) {
+    background: rgb(250, 201, 82);
+    width: 700px;
+}
+
+.block:nth-child(11) {
+    background: rgb(26, 84, 207);
+}
+
+.block:nth-child(12) {
+    background: rgb(36, 217, 127);
+}
+
+.block:nth-child(13) {
+    background: rgb(157, 86, 247);
+}
+
+.block:nth-child(14) {
+    background: rgb(250, 201, 82);
+}
+
+.block:nth-child(15) {
+    background: rgb(232, 88, 67);
+}
+
+.block:nth-child(16) {
+    background: rgb(36, 217, 127);
+    width: 700px;
+}
+
+.block:nth-child(17) {
+    background: rgb(157, 86, 247);
+}
+
+.block:nth-child(18) {
+    background: rgb(26, 84, 207);
+}
+
+.block:nth-child(19) {
+    background: rgb(250, 201, 82);
+}
+
+.block:nth-child(20) {
+    background: rgb(232, 88, 67);
+    width: 700px;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        clip-path: inset(100% 100% 0 0);
     }
-    100% {
-       transform: scale(1) translateX(0);
-       opacity: 1;
+
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
     }
-   }
+}
+
+.block {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
