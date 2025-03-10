@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bento Grid Layout</title>
+  <style>
+    :root {
+      --bg-color: #f5f5f5;
+      --card-bg: #ffffff;
+      --primary-color: #3a6df0;
+      --text-color: #333333;
+      --border-radius: 12px;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .bento-grid {
+        margin: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      padding: 16px;
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--border-radius);
+    }
+
+    .card-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .card-text {
+      font-size: 14px;
+      color: #555555;
+    }
+
+    .stat {
+      font-size: 32px;
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+
+    @media (min-width: 768px) {
+      .bento-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .card.large {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+
+      .card.medium {
+        grid-column: span 2;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bento-grid">
+    <div class="card large">
+      <div class="card-title">AI - MONITOR FOR YOUR CAR</div>
+      <div class="card-text">AI-Powered Car Care: TechX Keeps You Ahead</div>
+    </div>
+    <div class="card">
+      <img src="https://plus.unsplash.com/premium_photo-1683910767532-3a25b821f7ae?q=80&w=2008&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="System Check" />
+      <div class="card-title">ABS SYSTEM CHECK</div>
+      <div class="card-text">Fast Result</div>
+    </div>
+    <div class="card">
+      <div class="stat">74%</div>
+      <div class="card-text">Less wasted</div>
+    </div>
+    <div class="card medium">
+        <img src="https://images.unsplash.com/photo-1624670760266-0ddc7639b3a4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Battery" />
+        <div class="card-text">We provide complete energy efficiency analysis, predictive maintenance and more</div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1505533321630-975218a5f66f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Car Engine" />
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1526779259212-939e64788e3c?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Car Dashboard" />
+      </div>
+    <div class="card">
+      <div class="card-title">4550 RPM</div>
+      <div class="card-text">100 kW • 135 MPH • 2.4 G</div>
+    </div>
+    <div class="card">
+      <div class="card-title">TECHX</div>
+    </div>
+  </div>
+</body>
+</html>
